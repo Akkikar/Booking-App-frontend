@@ -1,0 +1,132 @@
+/* Navbar Styles */
+.navbar {
+  height: 50px;
+  background-color: #003580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 15px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navButton {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #003580;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.userMenu {
+  position: relative;
+  cursor: pointer;
+}
+
+.username {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: palegreen;
+  border-radius: 5px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdownItem {
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdownItem:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Navbar Styles */
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .navItems {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navContainer {
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 18px;
+    display: block; /* Ensures the logo is always visible */
+  }
+
+  .navItems {
+    display: none; /* Hide non-essential nav items for simplicity */
+  }
+
+  /* Ensure login/register buttons remain visible */
+  .navButton {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .username {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}

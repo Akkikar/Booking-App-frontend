@@ -1,0 +1,107 @@
+/* Base Styles */
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f5;
+  background-image: url("https://img.freepik.com/free-photo/hammocks-with-palm-trees_1203-201.jpg");
+  background-size: cover; /* Ensure the background image covers the entire screen */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent vertical scrolling */
+}
+
+/* Container Styles */
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Input Styles */
+.lInput {
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.lInput:focus {
+  border-color: #0071c2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 113, 194, 0.5);
+}
+
+/* Button Styles */
+.lButton {
+  border: none;
+  padding: 12px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.lButton:hover {
+  background-color: #005ea6;
+}
+
+.lButton:disabled {
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+/* Media Queries */
+
+/* For tablet and smaller screens */
+@media (max-width: 768px) {
+  .login {
+    padding: 10px;
+    background-position: center center;
+  }
+
+  .lContainer {
+    padding: 20px;
+  }
+
+  .lButton {
+    font-size: 14px;
+  }
+}
+
+/* For mobile and smaller screens */
+@media (max-width: 480px) {
+  .lInput {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .lButton {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .lContainer {
+    padding: 15px;
+  }
+
+  .login {
+    background-size: cover;
+    background-position: center top;
+  }
+}

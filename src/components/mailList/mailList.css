@@ -1,0 +1,77 @@
+.mail {
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+  max-width: 600px;
+  transition: box-shadow 0.3s ease;
+}
+
+.mail:hover {
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.mailTitle {
+  font-size: 26px; 
+  font-weight: bold; 
+  margin-bottom: 10px;
+  color: #333; 
+}
+
+.mailDesc {
+  color: #555;
+  font-size: 18px; 
+  margin-bottom: 20px;
+}
+
+.mailInputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.mailInputContainer input[type="email"] {
+  padding: 12px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease;
+}
+
+.mailInputContainer input[type="email"]:focus {
+  border-color: #0071c2; 
+  outline: none;
+}
+
+.mailInputContainer button {
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; 
+}
+
+.mailInputContainer button:hover {
+  background-color: #005ea2; 
+}
+
+@media (max-width: 600px) {
+  .mailInputContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .mailInputContainer input[type="email"] {
+    width: 100%;
+    margin-bottom: 0; 
+  }
+}

@@ -1,0 +1,95 @@
+.fp {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto; /* Center the container */
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.fpItem {
+  flex: 0 1 calc(25% - 20px); /* Four items per row with gap */
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  background: white; /* Optional: Background color for better visibility */
+  border-radius: 10px; /* Optional: Rounded corners */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.fpImg {
+  width: 100%;
+  height: 250px; /* Fixed height for images */
+  object-fit: cover;
+}
+
+.fpName {
+  color: #333;
+  font-weight: bold;
+  margin: 10px; /* Add margin for spacing */
+}
+
+.fpCity {
+  font-weight: 300;
+  margin: 0 10px; /* Add margin for spacing */
+}
+
+.fpPrice {
+  font-weight: 500;
+  margin: 0 10px; /* Add margin for spacing */
+}
+
+.fpRating > button {
+  background-color: #003580;
+  color: white;
+  border: none;
+  padding: 3px 6px; /* Adjust padding for button */
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.fpRating > span {
+  font-size: 14px;
+}
+
+/* Tablet screens */
+@media screen and (max-width: 768px) {
+  .fpItem {
+    flex: 0 1 calc(50% - 20px); /* Two items per row on tablet */
+    height: auto; /* Allow height to be dynamic */
+  }
+
+  .fpImg {
+    height: 200px; /* Reduce height on smaller screens */
+  }
+
+  .fpName, .fpCity, .fpPrice {
+    margin: 5px; /* Reduce margin */
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 480px) {
+  .fpItem {
+    flex: 0 1 100%; /* Full width for mobile */
+  }
+
+  .fpImg {
+    height: 180px; /* Further reduce height */
+  }
+
+  .fpName, .fpCity, .fpPrice {
+    font-size: 12px; /* Smaller font size for mobile */
+    margin: 2px; /* Minimal margin */
+  }
+
+  .fpRating > button {
+    padding: 2px 4px; /* Smaller button padding */
+  }
+
+  .fpRating > span {
+    font-size: 12px; /* Adjust span font size */
+  }
+}
